@@ -1,0 +1,84 @@
+/* FOCUS ON LINE 11,18,19,20,23,26,71,72,73,83  */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#wrapper{
+    overflow-x: hidden;
+    overflow-y: auto; 
+    height: 100vh;
+    perspective: 10px;/* we have to give perspective to use 3d effect*/
+}
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d; /*To preserve the 3d effect if it is not used then it will only work as 2d */
+    z-index:-1;
+}
+.background{
+    transform: translateZ(-40px) scale(5.1);
+}
+.foreground{
+    transform: translateZ(-30px) scale(4);
+}
+.background , .foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+h1{ 
+    position: absolute;
+    top: 8rem;
+    font-size: 12rem;
+    letter-spacing: 4px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0.3);
+}
+section{
+    background-color: rgb(45,45,45);
+    color: white;
+    padding: 5rem 0;   
+}
+
+.subHeading{
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+.text{
+    padding: 0 10rem;
+    font-size: 1.5rem;
+    margin: 5rem 0;
+}
+.bg1{
+    background-image: url(sport-1.jpg);
+}
+.bg2{
+    background-image: url(sport-2.jpg);
+}
+.bg3{
+    background-image: url(sport-3.jpg);
+}
+.bg{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.desc{
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 2.5rem;
+    font-size: 3.5rem;
+    color: black;
+    top: 50%;
+    left: 40%;
+    transform: translateX(-50%);
+}
